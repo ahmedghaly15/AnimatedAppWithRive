@@ -6,4 +6,9 @@ abstract class AppTextStyles {
     fontFamily: "Poppins",
     height: 1.2,
   );
+
+  static const TextStyle textStyle40 = TextStyle(
+    fontSize: 40.0,
+    fontFamily: "Poppins",
+  );
 }
