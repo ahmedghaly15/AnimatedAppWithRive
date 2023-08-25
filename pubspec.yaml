@@ -31,6 +31,17 @@ flutter:
     - assets/icons/
     - assets/RiveAssets/
 
+  fonts:
+    - family: Intel
+      fonts:
+        - asset: assets/Fonts/Inter-Regular.ttf
+        - asset: assets/Fonts/Inter-SemiBold.ttf
+          weight: 600
+    - family: Poppins
+      fonts:
+        - asset: assets/Fonts/Poppins-Bold.ttf
+          weight: 700
+
 flutter_assets:
   assets_path: assets/
   output_path: lib/core/global/

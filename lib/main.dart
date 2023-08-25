@@ -10,10 +10,9 @@ void main() {
 class AnimatedAppWithRive extends StatelessWidget {
   const AnimatedAppWithRive({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init;
+    SizeConfig().init(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'The Flutter Way',
