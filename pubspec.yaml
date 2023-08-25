@@ -1,0 +1,38 @@
+name: animated_app
+description: A new Flutter project.
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ">=3.0.5 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  rive: ^0.9.1
+  flutter_svg: ^1.1.6
+
+  reusable_components:
+    git:
+      url: https://github.com/ahmedghaly15/Reusable-Components-Package
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/avatars/
+    - assets/Backgrounds/
+    - assets/icons/
+    - assets/RiveAssets/
+
+flutter_assets:
+  assets_path: assets/
+  output_path: lib/core/global/
+  filename: app_assets.dart
+  field_prefix:
