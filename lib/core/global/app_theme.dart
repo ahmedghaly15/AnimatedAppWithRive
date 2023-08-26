@@ -6,7 +6,7 @@ abstract class AppTheme {
       scaffoldBackgroundColor: const Color(0xFFEEF1F8),
       primarySwatch: AppColors.primaryColor,
       fontFamily: "Intel",
-      textTheme: ThemeData.light().textTheme,
+      // textTheme: ThemeData.light().textTheme,
       inputDecorationTheme: const InputDecorationTheme(
         filled: true,
         fillColor: Colors.white,
