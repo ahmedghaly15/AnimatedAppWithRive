@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reusable_components/reusable_components.dart';
 
 import 'dialog_content.dart';
 
@@ -11,7 +12,7 @@ Future<Object?> customSignInDialog(BuildContext context,
     context: context,
     pageBuilder: (context, _, __) => Center(
       child: Container(
-        height: 620,
+        height: SizeConfig.screenHeight! * 0.75,
         margin: const EdgeInsets.symmetric(horizontal: 16),
         padding: const EdgeInsets.symmetric(
           vertical: 32,
@@ -25,7 +26,7 @@ Future<Object?> customSignInDialog(BuildContext context,
         ),
         child: const Scaffold(
           backgroundColor: Colors.transparent,
-          body: DialogContent(),
+          body: SingleChildScrollView(child: DialogContent()),
         ),
       ),
     ),

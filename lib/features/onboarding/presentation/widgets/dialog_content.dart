@@ -24,7 +24,7 @@ class DialogContent extends StatelessWidget {
               style: AppTextStyles.textStyle40,
             ),
             const Padding(
-              padding: EdgeInsets.symmetric(vertical: 16),
+              padding: EdgeInsets.symmetric(vertical: 20),
               child: Text(
                 "Access to 240+ hours of content. Learn design and code by building real apps with Flutter",
                 textAlign: TextAlign.center,
@@ -41,7 +41,7 @@ class DialogContent extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  padding: EdgeInsets.symmetric(horizontal: 18),
                   child: Text(
                     "OR",
                     style: TextStyle(color: Colors.black26),

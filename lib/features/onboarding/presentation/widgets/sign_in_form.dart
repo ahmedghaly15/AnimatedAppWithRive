@@ -1,3 +1,5 @@
+import 'package:animated_app/core/utils/rive_utils.dart';
+import 'package:animated_app/features/entry_point/presentation/views/entry_point_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:rive/rive.dart';
@@ -26,17 +28,6 @@ class _SignInFormState extends State<SignInForm> {
   late SMITrigger reset;
 
   late SMITrigger confetti;
-
-  StateMachineController getRiveController(Artboard artboard) {
-    StateMachineController? controller = StateMachineController.fromArtboard(
-      artboard,
-      "State Machine 1",
-    );
-
-    artboard.addController(controller!);
-
-    return controller;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -83,7 +74,7 @@ class _SignInFormState extends State<SignInForm> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 8.0, bottom: 24),
+                padding: const EdgeInsets.only(top: 16.0, bottom: 24),
                 child: ElevatedButton.icon(
                   onPressed: () => signIn(context),
                   icon: const Icon(
@@ -114,7 +105,7 @@ class _SignInFormState extends State<SignInForm> {
                   AppAssets.riveAssetsCheck,
                   onInit: (Artboard artboard) {
                     StateMachineController controller =
-                        getRiveController(artboard);
+                        RiveUtils.getRiveController(artboard);
                     check = controller.findSMI("Check") as SMITrigger;
                     error = controller.findSMI("Error") as SMITrigger;
                     reset = controller.findSMI("Reset") as SMITrigger;
@@ -130,7 +121,7 @@ class _SignInFormState extends State<SignInForm> {
                     AppAssets.riveAssetsConfetti,
                     onInit: (artboard) {
                       StateMachineController controller =
-                          getRiveController(artboard);
+                          RiveUtils.getRiveController(artboard);
 
                       confetti =
                           controller.findSMI("Trigger explosion") as SMITrigger;
@@ -144,6 +135,8 @@ class _SignInFormState extends State<SignInForm> {
   }
 
   void signIn(BuildContext context) {
+    FocusScope.of(context).unfocus;
+
     // First, once the SignIn button is clicked, it shows the loading
 
     setState(() {
@@ -165,6 +158,18 @@ class _SignInFormState extends State<SignInForm> {
               });
 
               confetti.fire();
+
+              Future.delayed(
+                const Duration(seconds: 1),
+                () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const EntryPointView(),
+                    ),
+                  );
+                },
+              );
             },
           );
         } else {
