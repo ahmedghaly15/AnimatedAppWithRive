@@ -28,28 +28,24 @@ To run this project locally, follow these steps:
 
 ```
 git clone https://github.com/ahmedghaly15/AnimatedAppWithRive ↗
-
 ```
 
 2. Change to the project directory:
 
 ```
 cd AnimatedAppWithRive
-
 ```
 
 3. Install the dependencies:
 
 ```
 flutter pub get
-
 ```
 
 4. Run the app:
 
 ```
 flutter run
-
 ```
 
 ## Dependencies
