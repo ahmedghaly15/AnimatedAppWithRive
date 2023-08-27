@@ -16,9 +16,9 @@ https://github.com/ahmedghaly15/AnimatedAppWithRive/assets/108659381/2e0fe126-e6
 
 ## Features
 
-- Onboarding screen: Introduce users to the app's features with captivating Rive animations.
-- Entry screen: Provide a visually appealing transition from the onboarding screen to the main app.
-- Home screen: Display relevant information and interactive elements with smooth Rive animations.
+- `Onboarding screen`: Introduce users to the app's features with captivating Rive animations.
+- `Entry screen`: Provide a visually appealing transition from the onboarding screen to the main app.
+- `Home screen`: Display relevant information and interactive elements with smooth Rive animations.
 
 ## Installation
 
